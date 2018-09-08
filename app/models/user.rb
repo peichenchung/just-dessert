@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates_presence_of :username, :role
+
+  def admin?
+    self.role == "admin"
+  end
+  
 end
