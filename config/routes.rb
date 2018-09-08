@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   root "tests#index" #前台首頁
 
   namespace :admin do
