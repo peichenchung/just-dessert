@@ -1,24 +1,10 @@
-# README
+git clone https://github.com/revichung/just-dessert.git
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+cd just-dessert
 
-Things you may want to cover:
+bundle install
 
-* Ruby version
+rails db:migrate
 
-* System dependencies
+rails db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
