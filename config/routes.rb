@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     root "tests#index" #管理員後台首頁
   end
 
+  namespace :shop do
+    root "shops#index" #店家後台首頁
+  end
+
 end
