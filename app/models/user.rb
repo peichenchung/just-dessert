@@ -9,5 +9,9 @@ class User < ApplicationRecord
   def admin?
     self.role == "admin"
   end
+
+  def shop?
+    self.role == "shop"
+  end
   
 end

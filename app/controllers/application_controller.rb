@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def authenticate_shop
+      unless current_user.shop?
+        flash[:alert] = "Not allow!"
+        redirect_to root_path
+      end
+    end
+
   protected
 
     def configure_permitted_parameters
