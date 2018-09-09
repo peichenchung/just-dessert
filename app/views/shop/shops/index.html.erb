@@ -1,11 +1,13 @@
 <h1>吃甜甜 店家(shop)後台首頁</h1>
 
-<% if current_user.shop %>
-  <h2><%= current_user.shop.shopname %></h2>
-  電話：<%= current_user.shop.tel %><br>
-  地址：<%= current_user.shop.location %><br>
-  營業時間：<%= current_user.shop.opening_hours %><br>
-  介紹：<%= current_user.shop.intro %><br>
+<% if @shop %>
+  <%= image_tag @shop.image.url if @shop.image? %>
+  <%= image_tag @shop.logo.url if @shop.logo? %>
+  <h2><%= @shop.shopname %></h2>
+  電話：<%= @shop.tel %><br>
+  地址：<%= @shop.location %><br>
+  營業時間：<%= @shop.opening_hours %><br>
+  介紹：<%= @shop.intro %><br>
 <% else %>
   <%= link_to '建立我的商店', new_shop_shop_path %>
 <% end %>
