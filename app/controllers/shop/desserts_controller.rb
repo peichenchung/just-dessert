@@ -3,7 +3,7 @@ class Shop::DessertsController < ApplicationController
   before_action :authenticate_shop
 
   def index
-    
+  
   end
 
   def new
