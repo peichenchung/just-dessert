@@ -1,3 +1,12 @@
+<% if @shop.errors.any? %>
+  <h2>We have some errors here !</h2>
+  <ul>
+    <% @shop.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for [:shop, @shop] do |f| %>
   <%= f.label :shopname, "Shop Name" %>
   <%= f.text_field :shopname %>
