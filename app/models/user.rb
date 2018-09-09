@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates_presence_of :username, :role
 
+  has_one :shop, -> { where(:role => "shop") } #設定role為shop的user與shop的一對一關聯
+
   def admin?
     self.role == "admin"
   end
