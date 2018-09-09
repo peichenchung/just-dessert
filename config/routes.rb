@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :shop do
     resources :shops
+    resources :desserts
     root "shops#index" #店家後台首頁
   end
 

@@ -1,5 +1,9 @@
 <h1>吃甜甜 店家(shop)後台首頁</h1>
 
+<br>
+
+<!-- 店家基本資料 -->
+
 <% if @shop %>
   <%= image_tag @shop.image.url if @shop.image? %>
   <%= image_tag @shop.logo.url if @shop.logo? %>
