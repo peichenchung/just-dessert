@@ -22,6 +22,21 @@ class Shop::DessertsController < ApplicationController
     end
   end
 
+  def edit
+    @dessert = Dessert.find(params[:id])
+  end
+
+  def update
+    @dessert = Dessert.find(params[:id])
+    if @dessert.update(dessert_params)
+      flash[:notice] = "更新成功"
+      redirect_to shop_desserts_path(@dessert)
+    else
+      flash.now[:alert] = "更新失敗"
+      render :edit
+    end
+  end
+
   private
 
   def dessert_params
