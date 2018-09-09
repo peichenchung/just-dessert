@@ -13,7 +13,8 @@
   價格：<%= dessert.price %><br>
   介紹：<%= dessert.description %><br>
 
-  <%= link_to '編輯', edit_shop_dessert_path(dessert) %>
+  <%= link_to '編輯', edit_shop_dessert_path(dessert) %> | 
+  <%= link_to '刪除', shop_dessert_path(dessert), method: :delete, data: {confirm:"你確定?"} %>
 
   <hr>
 <% end %>

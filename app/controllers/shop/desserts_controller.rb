@@ -37,6 +37,13 @@ class Shop::DessertsController < ApplicationController
     end
   end
 
+  def destroy
+    @dessert = Dessert.find(params[:id])
+    @dessert.destroy
+    redirect_to shop_desserts_path
+    flash[:alert] = "甜點已被刪除"
+  end
+
   private
 
   def dessert_params
