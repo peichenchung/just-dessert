@@ -15,7 +15,7 @@ class Shop::ShopsController < ApplicationController
     @shop.user_id = current_user.id
     if @shop.save
       flash[:notice] = "成功建立商店"
-      redirect_to shop_shops_path
+      redirect_to shop_shops_path(@shop)
     else
       flash.now[:alert] = "商店建立失敗!!"
       render :new
@@ -24,6 +24,17 @@ class Shop::ShopsController < ApplicationController
 
   def edit
     @shop = current_user.shop
+  end
+
+  def update
+    @shop = current_user.shop
+    if @shop.update(shop_params)
+      flash[:notice] = "更新成功"
+      redirect_to shop_shops_path(@shop)
+    else
+      flash.now[:alert] = "更新失敗"
+      render :edit
+    end
   end
 
   private
