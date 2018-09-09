@@ -1,0 +1,22 @@
+<%= form_for [:shop, @shop] do |f| %>
+  <%= f.label :shopname, "Shop Name" %>
+  <%= f.text_field :shopname %>
+
+  <%= f.label :tel, "Tel" %>
+  <%= f.text_field :tel %>
+
+  <%= f.label :location, "Location" %>
+  <%= f.text_field :location %>
+
+  <%= f.label :opening_hours, "Opening Hours" %>
+  <%= f.text_field :opening_hours %>
+
+  <%= f.label :logo, "Logo" %>
+
+  <%= f.label :image, "Image" %>
+
+  <%= f.label :intro, "Introduction" %>
+  <%= f.text_area :intro %>
+
+  <%= f.submit %>
+<% end %>

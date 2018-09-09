@@ -5,5 +5,9 @@ class Shop::ShopsController < ApplicationController
   def index #店家後台首頁
     
   end
+
+  def new
+    @shop = Shop.new
+  end
   
 end
