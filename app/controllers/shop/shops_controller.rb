@@ -22,6 +22,10 @@ class Shop::ShopsController < ApplicationController
     end
   end
 
+  def edit
+    @shop = current_user.shop
+  end
+
   private
 
   def shop_params

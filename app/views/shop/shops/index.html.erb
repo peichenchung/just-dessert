@@ -8,6 +8,8 @@
   地址：<%= @shop.location %><br>
   營業時間：<%= @shop.opening_hours %><br>
   介紹：<%= @shop.intro %><br>
+  <br>
+  <%= link_to '編輯', edit_shop_shop_path(@shop) %>
 <% else %>
   <%= link_to '建立我的商店', new_shop_shop_path %>
 <% end %>

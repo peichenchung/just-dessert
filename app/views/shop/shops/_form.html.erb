@@ -1,0 +1,49 @@
+<% if @shop.errors.any? %>
+  <h2>We have some errors here !</h2>
+  <ul>
+    <% @shop.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for [:shop, @shop] do |f| %>
+  <%= f.label :shopname, "Shop Name" %>
+  <%= f.text_field :shopname %>
+
+  <br>
+
+  <%= f.label :tel, "Tel" %>
+  <%= f.text_field :tel %>
+
+  <br>
+
+  <%= f.label :location, "Location" %>
+  <%= f.text_field :location %>
+
+  <br>
+
+  <%= f.label :opening_hours, "Opening Hours" %>
+  <%= f.text_field :opening_hours %>
+
+  <br>
+
+  <%= f.label :logo, "Logo (建議大小：200x200)" %>
+  <%= f.file_field :logo %>
+
+  <br>
+
+  <%= f.label :image, "Image (建議大小：600x200)" %>
+  <%= f.file_field :image %>
+
+  <br>
+
+  <%= f.label :intro, "Introduction" %>
+  <%= f.text_area :intro %>
+
+  <br>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to '回店家後台首頁', shop_shops_path %>
