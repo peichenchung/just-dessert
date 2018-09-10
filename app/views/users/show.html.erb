@@ -1,0 +1,9 @@
+<h1>Profile</h1>
+
+<%= image_tag @user.avatar.url if @user.avatar? %><br>
+
+<h2><%= @user.username %></h2>
+<p>( <%= @user.role %> )</p>
+<p><%= @user.email %></p>
+<p><%= @user.intro %></p>
+
