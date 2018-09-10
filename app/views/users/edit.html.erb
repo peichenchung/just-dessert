@@ -1,0 +1,10 @@
+<%= form_for @user do |f| %>
+  <%= f.label :username, "暱稱" %>
+  <%= f.text_field :username %>
+
+  <%= f.label :intro, "自我介紹" %>
+  <%= f.text_area :intro %>
+
+  <%= f.submit %>
+  <%= link_to "Cancel", user_path(@user) %>
+<% end %>
