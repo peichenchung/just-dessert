@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates_presence_of :username, :role
 
+  mount_uploader :avatar, AvatarUploader
+
   has_one :shop #設定user與shop的一對一關聯
 
   def admin?

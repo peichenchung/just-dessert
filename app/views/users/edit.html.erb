@@ -2,8 +2,17 @@
   <%= f.label :username, "暱稱" %>
   <%= f.text_field :username %>
 
+  <br>
+
   <%= f.label :intro, "自我介紹" %>
   <%= f.text_area :intro %>
+
+  <br>
+
+  <%= f.label :avatar, "Avatar" %>
+  <%= f.file_field :avatar %>
+
+  <br>
 
   <%= f.submit %>
   <%= link_to "Cancel", user_path(@user) %>
